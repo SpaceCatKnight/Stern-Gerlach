@@ -1,0 +1,29 @@
+
+% Ideal Detector signal
+%copied from IdealFunc: applies to column instead of line vector
+
+function result = IdealFun2(param, x)
+
+A = param(1);  Center = param(2); q = param(3); D = param(4);
+
+%% to avoid devision by zero in function
+[sizeX, ~] = size(x) ;
+for k = 1:sizeX 
+   if abs(x(k) - Center) < 1e-10
+      x(k) = Center + 1e-10 ;
+   end
+end 
+%%
+result = A.*(  exp(-q./abs(x-Center))./(abs(x-Center).^3)  ) + D ;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                        q
+%                          A exp(- --------------)
+%                                    | x - C |
+% IdealFun2([A,C,q,D], x) = ----------------------- + D
+%                                            3
+%                                   | x - C |
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
