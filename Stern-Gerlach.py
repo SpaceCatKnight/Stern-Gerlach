@@ -4,8 +4,6 @@ author: hp aka HanspPeter
 """
 
 
-# naja nur 19 grösseordnige denäbed
-
 import numpy as np
 import matplotlib.pyplot as plt
 
