@@ -130,6 +130,7 @@
 
 \chapter{Datentabellen}
 
+In der folgenden Tabelle sind unsere Messergebnisse dargestellt. Der Strom $I$ bezieht sich dabei auf die Magnetspulen, der Fehler darauf ist geschatzt und fliesst nur indirekt in die Fehlerrechnung. Das entsprechende Magnetfeld $B$ wurde mithilfe des Stroms aus der Magnetfeld-Eichkurve bestimmt, der Fehler darauf setzt sich zusammen aus dem Fehler auf dem Strom und der Ungenauigkeit des Ablesen aus der Kurve. Der Fehler auf der Temperatur ist hoher als die Genauigkeit des Messgerats weil die Temperatur nicht Konstant gehalten werden konnte. Der Fehler auf den Abstand der lokalen Maximas $q$ ergibt sich aus der Fit-Methode.
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.2} % Abstandzwischen Zeilen
@@ -143,12 +144,22 @@ $I$ [mA] & $B$ [T] & $T$ [K]  & $q$ [mm]\\ \hline
 900    $\pm$ 5     & 0.695    $\pm$ 0.010 & 459.9    $\pm$ 0.1    &5.3034  $\pm$  0.0032 \\
 1000    $\pm$ 5    & 0.750     $\pm$ 0.010 & 460.7       $\pm$ 0.1 &5.7311  $\pm$ 0.0041
 \end{tabular}
+\caption[Daten]{Gemessene Daten}
 \end{table} 
+Fur die Berechnung des magnetischen Moments des Elektrons haben wir die folgenden Konstanten benutzt:\\
+
+
+Lange der Pole:\\
 $L$ = 70.0 $\pm$ 0.5 $\cdot$ $10^{-3}$ m\\
+Radius des konvexen Pols:\\
 $a$ = 2.5 $\pm$ 0.2 $\cdot$ $10^{-3}$ m\\
+Distanz Magnetfeldeintritt-Detektor :\\
 $l$ = 0.455 $\pm$ 0.001 m\\
+Proportionalitats Faktor zwischen dem Magnetfeld und seiner Anderung in z-Richtung:
 $\epsilon$ = 0.953 $\pm$ 0.0026\\
 
+
+Die Fehler auf den Langen $L$, $l$, $a$ haben wir anhand ihrer Grosse und der Schwierigkeit der Durchfuhrung der Messung geschatzt. Der Fehler aus $\epsilon$ ist aus den Praktikumsunterlagen bekannt.
 \clearpage
 
 \chapter{Resultate}
@@ -176,14 +187,21 @@ $m_s,z$ = -9.285 $\cdot$ $10^{-24}$ J$\cdot$T$^{-1}$   \footnotesize{ \cite{http
 
 
 \chapter{Datenanalyse}
+
+Aus Uberlegungen zum geometrischen Aufbau der Versuchsanlage und der Kraft eines raumlich variierenden Magnetfeldes auf ein magnetisches Moment $\vec{ \mu }$ ergibt sich Formel (4.1), welche wir aus der Versuchsanleitung ubernommen haben. Dabei sind $u_e$ die wahrscheinlichsten Aufprallpunkte der Atome und $q$ ist der Abstand der beiden Maximas, die sich aus den zwei Spinneinstellungen ergeben.
+
+
 \begin{equation}
-m_{s,z}=\frac{2k_BTq}{lL(1-\frac{L}{2l})\frac{\partial B}{\partial z}}
+u_e=\pm \frac{q}{3}=\frac{lL(1-\frac{L}{2l})m_{s,z} \frac{\partial B}{\partial z}}{6k_BT}
 \end{equation}
+
+Die Veranderung des Magnetfeld in $z$-Richtung ergibt sich aus der Geometrie der Polschuhe, dabei ist der Aufbau des Magneten so gewahlt, dass sich ein moglichst konstanter Gradient in $z$-Richtung entlang des Atomstrahls ergibt. Aufgrund der Tatsache, dass der Gradient eines Magnetfeld schwer zu messen ist wurde die Annahme getroffen, dass $\frac{ \partial B}{ \partial z}$ proportional zu $B$ ist fur kleine Auslenkungen in $z$. Daraus ergibt sich der Proportionalitatsfaktor $\epsilon$.
 
 \begin{equation}
 \frac{\partial B}{\partial z}=\frac{\epsilon B}{a}
 \end{equation}
 
+Daraus ergibt sich folgende Formel zur Berechnung des magnetischen Moments des Elektrons $m_{s,z}$:
 \begin{equation}
 m_{s,z}=\frac{2k_BTqa}{lL(1-\frac{L}{2l})\epsilon B}
 \end{equation}
@@ -192,10 +210,14 @@ m_{s,z}=\frac{2k_BTqa}{lL(1-\frac{L}{2l})\epsilon B}
 \clearpage
 
 \chapter{Fehlerrechnung}
+Die Fehlerfortpflanzung wurde nach der Gaussschen Formel (5.1) ausgefuhrt. Dabei haben wir nur die Fehler auf $q$, $a$, $\epsilon$ $\&$ $B$ in unsere Berechnung einbezogen. Die Fehler auf der Temperatur $T$ und den Aufbaukonstanten $L$ $\&$ $l$ haben wir vernachlassigt, dies weil eine Verdoppelung des Fehlers nur eine Veranderung in der dritten Nachkommastelle des Gesammtfehlers zur Folge hatte.
+
 
 \begin{equation}
 m_{m_{s,z}}=\sqrt{(\frac{\partial m}{\partial q} \cdot m_q)^2+(\frac{\partial m}{\partial a} \cdot m_a)^2+(\frac{\partial m}{\partial \epsilon} \cdot m_\epsilon)^2+(\frac{\partial m}{\partial B} \cdot m_B)^2}
 \end{equation}
+
+Die folgenden vier Gleichungen sind die Partiellen Ableitungen der Gleichung (4.1), welche wir zur Berechnung des Gesamtfehler auf $m_{s,z}$ benotigt haben.
 
 \begin{equation}
 \frac{\partial m}{\partial q} = \frac{2k_BTa}{lL(1-\frac{L}{2l})\epsilon B}
