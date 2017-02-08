@@ -1,6 +1,6 @@
 \documentclass[a4paper,parskip,11pt, DIV12]{scrreprt}
 
-\usepackage[english]{babel} % FÃŒr Deutsch [english] zu [ngerman] Ã€ndern. 
+\usepackage[ngerman]{babel} % FÃŒr Deutsch [english] zu [ngerman] Ã€ndern. 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{blindtext}
@@ -62,7 +62,7 @@
 \usepackage{hyperref}
 
 \begin{document}
-
+\selectlanguage{ngerman}
 \begin{titlepage}
 \begin{figure}[h]
 \hfill
@@ -80,10 +80,10 @@
 \begingroup
 \leftskip 0 cm
 \rightskip\leftskip
-\textbf{Module:}\\ PHY131 \\ \\
-\textbf{Assistant:}\\ ???\\ \\
-\textbf{Students:}\\ Manuel Sommerhalder, Stefan Hochrein, Ruben Beynon\\ \\
-\textbf{Date of the experiment:}\\ 22.01.2017 \\ \\
+\textbf{Modul:}\\ PHY131 \\ \\
+\textbf{Assistent:}\\ ???\\ \\
+\textbf{Studenten:}\\ Manuel Sommerhalder, Stefan Hochrein, Ruben Beynon\\ \\
+\textbf{Datum des Versuchs:}\\ 22.01.2017 \\ \\
 \par
 \endgroup
 \clearpage
@@ -97,7 +97,7 @@
 \pagestyle{fancy}
 \fancyhead{} 
 \fancyhead[R]{\small \leftmark}
-\fancyhead[C]{\textbf{Imaging by lenses} } 
+\fancyhead[C]{\textbf{Stern-Gerlach} } 
 \fancyhead[L]{\includegraphics[height=2\baselineskip]{uzh}}
 
 \fancyfoot{}
@@ -123,14 +123,14 @@
 
 %\tableofcontents
 
-\chapter{Einfuhrung}
+\chapter{Einf"uhrung}
 
 
 \clearpage
 
 \chapter{Datentabellen}
 
-In der folgenden Tabelle sind unsere Messergebnisse dargestellt. Der Strom $I$ bezieht sich dabei auf die Magnetspulen, der Fehler darauf ist geschatzt und fliesst nur indirekt in die Fehlerrechnung. Das entsprechende Magnetfeld $B$ wurde mithilfe des Stroms aus der Magnetfeld-Eichkurve bestimmt, der Fehler darauf setzt sich zusammen aus dem Fehler auf dem Strom und der Ungenauigkeit des Ablesen aus der Kurve. Der Fehler auf der Temperatur ist hoher als die Genauigkeit des Messgerats weil die Temperatur nicht Konstant gehalten werden konnte. Der Fehler auf den Abstand der lokalen Maximas $q$ ergibt sich aus der Fit-Methode.
+In der folgenden Tabelle sind unsere Messergebnisse dargestellt. Der Strom $I$ bezieht sich dabei auf die Magnetspulen, der Fehler darauf ist gesch"atzt und fliesst nur indirekt in die Fehlerrechnung. Das entsprechende Magnetfeld $B$ wurde mithilfe des Stroms aus der Magnetfeld-Eichkurve bestimmt, der Fehler darauf setzt sich zusammen aus dem Fehler auf dem Strom und der Ungenauigkeit des Ablesen aus der Kurve. Der Fehler auf der Temperatur ist h"oher als die Genauigkeit des Messger"ats weil die Temperatur nicht Konstant gehalten werden konnte. Der Fehler auf den Abstand der lokalen Maxima $q$ ergibt sich aus der Fit-Methode.
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.2} % Abstandzwischen Zeilen
@@ -146,20 +146,20 @@ $I$ [mA] & $B$ [T] & $T$ [K]  & $q$ [mm]\\ \hline
 \end{tabular}
 \caption[Daten]{Gemessene Daten}
 \end{table} 
-Fur die Berechnung des magnetischen Moments des Elektrons haben wir die folgenden Konstanten benutzt:\\
+F"ur die Berechnung des magnetischen Moments des Elektrons haben wir die folgenden Konstanten ben"utzt:\\
 
 
-Lange der Pole:\\
+L"ange der Pole:\\
 $L$ = 70.0 $\pm$ 0.5 $\cdot$ $10^{-3}$ m\\
 Radius des konvexen Pols:\\
 $a$ = 2.5 $\pm$ 0.2 $\cdot$ $10^{-3}$ m\\
 Distanz Magnetfeldeintritt-Detektor :\\
 $l$ = 0.455 $\pm$ 0.001 m\\
-Proportionalitats Faktor zwischen dem Magnetfeld und seiner Anderung in z-Richtung:
+Proportionalit"ats Faktor zwischen dem Magnetfeld und seiner "Anderung in z-Richtung:
 $\epsilon$ = 0.953 $\pm$ 0.0026\\
 
 
-Die Fehler auf den Langen $L$, $l$, $a$ haben wir anhand ihrer Grosse und der Schwierigkeit der Durchfuhrung der Messung geschatzt. Der Fehler aus $\epsilon$ ist aus den Praktikumsunterlagen bekannt.
+Die Fehler auf den L"angen $L$, $l$, $a$ haben wir anhand ihrer Gr"osse und der Schwierigkeit der Durchf"uhrung der Messung gesch"atzt. Der Fehler aus $\epsilon$ ist aus den Praktikumsunterlagen bekannt.
 \clearpage
 
 \chapter{Resultate}
@@ -188,14 +188,14 @@ $m_s,z$ = -9.285 $\cdot$ $10^{-24}$ J$\cdot$T$^{-1}$   \footnotesize{ \cite{http
 
 \chapter{Datenanalyse}
 
-Aus Uberlegungen zum geometrischen Aufbau der Versuchsanlage und der Kraft eines raumlich variierenden Magnetfeldes auf ein magnetisches Moment $\vec{ \mu }$ ergibt sich Formel (4.1), welche wir aus der Versuchsanleitung ubernommen haben. Dabei sind $u_e$ die wahrscheinlichsten Aufprallpunkte der Atome und $q$ ist der Abstand der beiden Maximas, die sich aus den zwei Spinneinstellungen ergeben.
+Aus "Uberlegungen zum geometrischen Aufbau der Versuchsanlage und der Kraft eines r"aumlich variierenden Magnetfeldes auf ein magnetisches Moment $\vec{ \mu }$ ergibt sich Formel (4.1), welche wir aus der Versuchsanleitung "ubernommen haben. Dabei sind $u_e$ die wahrscheinlichsten Aufprallpunkte der Atome und $q$ ist der Abstand der beiden Maxima, die sich aus den zwei Spinneinstellungen ergeben.
 
 
 \begin{equation}
 u_e=\pm \frac{q}{3}=\frac{lL(1-\frac{L}{2l})m_{s,z} \frac{\partial B}{\partial z}}{6k_BT}
 \end{equation}
 
-Die Veranderung des Magnetfeld in $z$-Richtung ergibt sich aus der Geometrie der Polschuhe, dabei ist der Aufbau des Magneten so gewahlt, dass sich ein moglichst konstanter Gradient in $z$-Richtung entlang des Atomstrahls ergibt. Aufgrund der Tatsache, dass der Gradient eines Magnetfeld schwer zu messen ist wurde die Annahme getroffen, dass $\frac{ \partial B}{ \partial z}$ proportional zu $B$ ist fur kleine Auslenkungen in $z$. Daraus ergibt sich der Proportionalitatsfaktor $\epsilon$.
+Die Ver"anderung des Magnetfeld in $z$-Richtung ergibt sich aus der Geometrie der Polschuhe, dabei ist der Aufbau des Magneten so gew"ahlt, dass sich ein m"oglichst konstanter Gradient in $z$-Richtung entlang des Atomstrahls ergibt. Aufgrund der Tatsache, dass der Gradient eines Magnetfeld schwer zu messen ist wurde die Annahme getroffen, dass $\frac{ \partial B}{ \partial z}$ proportional zu $B$ ist f"ur kleine Auslenkungen in $z$. Daraus ergibt sich der Proportionalit"atsfaktor $\epsilon$.
 
 \begin{equation}
 \frac{\partial B}{\partial z}=\frac{\epsilon B}{a}
@@ -210,14 +210,14 @@ m_{s,z}=\frac{2k_BTqa}{lL(1-\frac{L}{2l})\epsilon B}
 \clearpage
 
 \chapter{Fehlerrechnung}
-Die Fehlerfortpflanzung wurde nach der Gaussschen Formel (5.1) ausgefuhrt. Dabei haben wir nur die Fehler auf $q$, $a$, $\epsilon$ $\&$ $B$ in unsere Berechnung einbezogen. Die Fehler auf der Temperatur $T$ und den Aufbaukonstanten $L$ $\&$ $l$ haben wir vernachlassigt, dies weil eine Verdoppelung des Fehlers nur eine Veranderung in der dritten Nachkommastelle des Gesammtfehlers zur Folge hatte.
+Die Fehlerfortpflanzung wurde nach der Gaussschen Formel (5.1) ausgef"uhrt. Dabei haben wir nur die Fehler auf $q$, $a$, $\epsilon$ $\&$ $B$ in unsere Berechnung einbezogen. Die Fehler auf der Temperatur $T$ und den Aufbaukonstanten $L$ $\&$ $l$ haben wir vernachl"assigt, dies weil eine Verdoppelung des Fehlers nur eine Ver"anderung in der dritten Nachkommastelle des Gesammtfehlers zur Folge hatte.
 
 
 \begin{equation}
 m_{m_{s,z}}=\sqrt{(\frac{\partial m}{\partial q} \cdot m_q)^2+(\frac{\partial m}{\partial a} \cdot m_a)^2+(\frac{\partial m}{\partial \epsilon} \cdot m_\epsilon)^2+(\frac{\partial m}{\partial B} \cdot m_B)^2}
 \end{equation}
 
-Die folgenden vier Gleichungen sind die Partiellen Ableitungen der Gleichung (4.1), welche wir zur Berechnung des Gesamtfehler auf $m_{s,z}$ benotigt haben.
+Die folgenden vier Gleichungen sind die Partiellen Ableitungen der Gleichung (4.1), welche wir zur Berechnung des Gesamtfehlers auf $m_{s,z}$ ben"otigt haben.
 
 \begin{equation}
 \frac{\partial m}{\partial q} = \frac{2k_BTa}{lL(1-\frac{L}{2l})\epsilon B}
