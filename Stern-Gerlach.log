@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.28)  9 FEB 2017 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.28)  9 FEB 2017 15:35
 entering extended mode
 **./Stern-Gerlach.tex
 (Stern-Gerlach.tex
@@ -1456,118 +1456,126 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 211.
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
-
-LaTeX Warning: Citation 'https://en.wikipedia.org' on page 8 undefined on input
- line 237.
-
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 237.
 File: uzh.png Graphic file (type png)
 <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 240.
+Package pdftex.def Info: uzh.png used on input line 233.
 (pdftex.def)             Requested size: 86.83403pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 240.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 240.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 240.
+(babel)             in language  on input line 233.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 240.
+(babel)             in language  on input line 233.
  [8
 
 
 ]
 chapter 4.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 243.
+(babel)             in language  on input line 236.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 243.
+(babel)             in language  on input line 236.
+<Polschuhe.jpg, id=109, 292.59312pt x 256.45813pt>
+File: Polschuhe.jpg Graphic file (type jpg)
+ <use Polschuhe.jpg>
+Package pdftex.def Info: Polschuhe.jpg used on input line 249.
+(pdftex.def)             Requested size: 204.81377pt x 179.51945pt.
 File: uzh.png Graphic file (type png)
+
 <use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 264.
+Package pdftex.def Info: uzh.png used on input line 259.
 (pdftex.def)             Requested size: 86.83403pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 264.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 264.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 264.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 264.
+(babel)             in language  on input line 259.
  [9
 
 
-]
-chapter 5.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 266.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 266.
+ <./Polschuhe.jpg>]
 File: uzh.png Graphic file (type png)
-<use uzh.png>
-Package pdftex.def Info: uzh.png used on input line 293.
+ <use uzh.png>
+Package pdftex.def Info: uzh.png used on input line 265.
 (pdftex.def)             Requested size: 86.83403pt x 27.20001pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 293.
+(babel)             in language  on input line 265.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 293.
+(babel)             in language  on input line 265.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 293.
+(babel)             in language  on input line 265.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 293.
- [10
+(babel)             in language  on input line 265.
+ [10]
+chapter 5.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 267.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 267.
+
+Overfull \hbox (1.36772pt too wide) in paragraph at lines 268--269
+[]\T1/phv/m/n/10.95 Die Feh-ler-fort-pflan-zung wur-de nach dem Gauss'schen Feh
+-ler-fort-pflan-zungs-ge-setz (For-
+ []
+
+File: uzh.png Graphic file (type png)
+<use uzh.png>
+Package pdftex.def Info: uzh.png used on input line 294.
+(pdftex.def)             Requested size: 86.83403pt x 27.20001pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 294.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 294.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 294.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 294.
+ [11
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
  (Stern-Gerlach.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
 Package rerunfilecheck Info: File `Stern-Gerlach.out' has not changed.
 (rerunfilecheck)             Checksum: 1F59A598DFDABC808C110725FD3B10F4;508.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                Stern-Gerlach
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'Stern-Gerlach.run.xml'.
 \openout1 = `Stern-Gerlach.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17288 strings out of 493329
- 284465 string characters out of 3139063
+ 17130 strings out of 493329
+ 281286 string characters out of 3139063
  684187 words of memory out of 3000000
- 20523 multiletter control sequences out of 15000+200000
- 40657 words of font info for 53 fonts, out of 3000000 for 9000
+ 20358 multiletter control sequences out of 15000+200000
+ 41044 words of font info for 54 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  44i,15n,66p,8826b,1760s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
-rw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
-vro8a.pfb>
-Output written on Stern-Gerlach.pdf (10 pages, 572017 bytes).
+ype1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/urw/helvetic/uhvro8a.pfb>
+Output written on Stern-Gerlach.pdf (11 pages, 629179 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
