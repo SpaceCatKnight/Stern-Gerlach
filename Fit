@@ -1,0 +1,65 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 20 16:45:44 2017
+
+@author: stefho
+"""
+
+from pylab import *
+import matplotlib.pyplot as plt
+
+x      = [0.0022452, 0.0035437, 0.0042096, 0.004781, 0.0053034, 0.005731099999999999]
+sig    = [0.012,0.021,0.027,0.034,0.042,0.052]
+y      = [0.306,0.470,0.549,0.621,0.685,0.738]
+sigq   = [0.0000015,0.0000025,0.0000029,0.0000032,0.0000032,0.0000041]
+
+
+plt.errorbar(x,y,sig,sigq,fmt='o')
+
+#
+# berechne Schaetzwerte, Kovarianzmatrix, chi2
+#
+
+w = []
+for h in range(len(y)):
+    w.append(1/(sig[h]**2))
+
+xy = []
+for i in range(len(y)):
+    xy.append(x[i]*y[i])
+    
+xx = []
+for j in range(len(x)):
+    xx.append(x[j]**2) 
+    
+sumw   = sum(w)
+
+xmean  = dot(x,w)/sumw
+ymean  = dot(y,w)/sumw
+xymean = dot(xy,w)/sumw
+xxmean = dot(xx,w)/sumw
+varx   = xxmean-xmean**2
+ahat    = (xymean-xmean*ymean)/varx
+bhat    = ymean - ahat*xmean
+vara    = 1.0/(sumw*varx)
+varb    = vara*xxmean
+covab   = -xmean*vara
+#chi2    = sum(((y-ahat*x-bhat)/sig)**2)
+ndf     = n 
+
+
+
+
+print(ahat)
+print(bhat)
+print(vara)
+print(varb)
+
+x2 = [0.002,0.003,0.004,0.005,0.006]
+y2 = []
+for i in range(len(x2)):
+    y2.append(ahat*x2[i]+bhat)
+    
+plt.plot(x2,y2)
+plt.xlabel("Abstand q [m]")
+plt.ylabel("B-Feld [T]")
