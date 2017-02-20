@@ -127,7 +127,7 @@
 
 Das Stern-Gerlach Experiment ist eine anschauliche Demonstration der Richtungsquantelung des magnetischen Moments aufgrund des Elektronenspins. Dazu wird ein einwertiges Metall (in unserem Fall Kalium) verdampft. Mit einer Blende entsteht ein Atomstrahl mit rechteckigem Querschnitt, der durch ein inhomogenes Magnetfeld senkrecht zu dessen Feldlinien verläuft. 
  
- Da das Kalium über abgeschlossenen inneren Schalen ein Aussenelektron hat und das magnetische Bahnmoment im Grundzustand null ist, ist das magnetische Moment des Atoms alleine auf das magnetische Spinmoment des Aussenelektrons zurückzuführen. Die Richtungsquantelung des magnetischen Moments resultiert während der Durchquerung des inhomogenen Magnetfeldes in einer symmetrischen Aufspaltung des Atomstrahls in zwei gleich grosse Teilstrahlen. Ziel des Versuchs ist es, das magnetische Moment $m_{s,z}$ anhand des Betrags der Aufspaltung, dem Gradienten des magnetischen Feldes senkrecht zur Strahlrichtung und der Geometriedaten zu bestimmen.
+ Da das Kalium über abgeschlossenen inneren Schalen ein einzelnes Aussenelektron in der S-Schale hat und das magnetische Bahnmoment im Grundzustand null ist, ist das magnetische Moment des Atoms alleine auf das magnetische Spinmoment des Aussenelektrons zurückzuführen. Die Richtungsquantelung des magnetischen Moments resultiert während der Durchquerung des inhomogenen Magnetfeldes in einer symmetrischen Aufspaltung des Atomstrahls in zwei gleich grosse Teilstrahlen. Ziel des Versuchs ist es, das magnetische Moment $m_{s,z}$ anhand des Betrags der Aufspaltung, dem Gradienten des magnetischen Feldes senkrecht zur Strahlrichtung und der Geometriedaten zu bestimmen.
  
  Da zum Zeitpunkt unserer Versuchsdurchführung der Detektor defekt war, konnten wir die Messung leider nicht selbst durchführen. Daher verwendeten wir die Messdaten einer anderen Gruppe. Die Bilder stammen alle aus der Versuchsanleitung.
  
@@ -138,7 +138,7 @@ Das Stern-Gerlach Experiment ist eine anschauliche Demonstration der Richtungsqu
  \textit{1. Stern und Gerlach haben 1921 in ihrem Experiment Silber verwendet. Warum funktioniert der
 Versuch auch mit Kalium?}
 
-Sowohl Silber, als auch Kalium verfügen über ein einzelnes Aussenelektron über abgeschlossenen inneren Schalen und haben im Grundzustand kein magnetisches Bahnmoment, wodurch das magnetische Moment alleine durch das magnetische Spinmoment des Aussenelektrons zustande kommt.
+Sowohl Silber, als auch Kalium verfügen über ein einzelnes Aussenelektron in der S-Schale über abgeschlossenen inneren Schalen und haben im Grundzustand kein magnetisches Bahnmoment, wodurch das magnetische Moment alleine durch das magnetische Spinmoment des Aussenelektrons zustande kommt.
 
 \textit{2. Welche Vor- und Nachteile hat die Verwendung von Kalium gegenüber von Silber?}
 
@@ -165,77 +165,14 @@ Bei Verwendung eines homogenen Magnetfeldes würde das magnetische Moment sich l
 \end{figure}
 Abbildung \ref{Abb:Setup} gibt einen Überblick über die wichtigsten Elemente des Versuchsaufbaus. Um eine Oxidierung des Kaliums zu verhindern, wird die Apparatur durch den Pumpenanschluss (3) evakuiert (unter 5$\cdot$10$^{-6}$ mbar). Der Ofen (1) wird auf ca 460 K aufgeheizt. Da die Temperatur trotz Regelung Schwankungen unterliegt, wird diese bei jeder Messung an der Messanzeige abgelesen und notiert. Der Strom auf den magnetischen Analysator (4) wird bei jeder Messung aufwärts variiert, um den Einfluss verschiedener Feldstärken beobachten zu können. Das Atomstrahlrohr (5) ist an der lamellierten Stelle nach dem Analysator biegbar, wodurch der Langmuir-Taylor-Detektor (6) per Schritttmotor (2) bewegt werden kann. Dadurch kann der Detektor per Computerprogramm gesteuert innerhalb eines Intervalls bei gleichmässiger Geschwindigkeit alle Positionen $u$ durchlaufen und die entsprechende Teilchenstromdichte $J(u)$ messen. 
 
-	Mit Hilfe des vorgegebenen Matlab-Tools wird dann mit dem Levenberg-Marquardt-Algorithmus ein Fit durch die Messdaten gelegt, dessen Form einer Überlagerung der in der Versuchsanleitung hergeleiteten theoretischen Verteilung und der des Nullfeldes entspricht. Diese Kurve verfügt über zwei lokalen Maxima, deren Abstand $q$ für die Berechnung des magnetischen Moments $m_{s,z}$ verwendet wird.
-
-\clearpage
-
-\chapter{Messdaten}
-
-\section{Datentabelle}
-In Tabelle \ref{tabelle1} sind die wichtigsten Resultate der Messungen zusammengefasst, und zwar der Strom $I$ durch die Magnetspulen, die Magnetfeldstärke $B$, die der jeweiligen Stromstärke $I$ entspricht (bestimmt anhand der Magnetfeld-Eichkurve in der Versuchsanleitung), die abgelesene Temperatur $T$ des Ofens und der Abstand $q$ zwischen den lokalen Maxima des Fits. Wir beschränken uns an dieser Stelle auf diese zusammengefasste Darstellung der Daten, da die Originalmessdaten pro Messung mehrere tausend Messpunkte umfassen. \\
-
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.2} % Abstandzwischen Zeilen
-\setlength{\tabcolsep}{3mm} % Abstandzwischen Spalten
-\begin{tabular}{|c|c|c|c|} 
-$I$ [mA] & $B$ [T] & $T$ [K]  & $q$ [mm]\\ \hline
-402   $\pm$ 5      & 0.320   $\pm$ 0.010   & 457.3  $\pm$ 0.1   & 2.2452 $\pm$ 0.0015 \\
-600    $\pm$ 5      & 0.485   $\pm$ 0.010   & 459.5  $\pm$ 0.1   &3.5437  $\pm$ 0.0025\\
-700    $\pm$ 5      & 0.560   $\pm$ 0.010  & 459.7   $\pm$ 0.1   &4.2096  $\pm$ 0.0029\\
-800    $\pm$ 5     & 0.635    $\pm$ 0.010 & 459.7    $\pm$ 0.1   & 4.7810 $\pm$  0.0032 \\
-900    $\pm$ 5     & 0.695    $\pm$ 0.010 & 459.9    $\pm$ 0.1    &5.3034  $\pm$  0.0032 \\
-1000    $\pm$ 5    & 0.750     $\pm$ 0.010 & 460.7       $\pm$ 0.1 &5.7311  $\pm$ 0.0041
-\end{tabular}
-\caption[Daten]{Zusammenfassung der Daten}\label{tabelle1}
-\end{table} Für die Berechnung des magnetischen Moments des Elektrons haben wir ausserdem die folgenden im Datenblatt der Versuchsanleitung gegebenen Konstanten verwendet:
-
-Länge der Pole:
-$L$ = (70.0 $\pm$ 0.5) mm
-
-Radius des konvexen Pols:
-$a$ = (2.5 $\pm$ 0.2) mm
-
-Distanz Magnetfeldeintritt-Detektor:
-$l$ = (0.455 $\pm$ 0.001) m
-
-Proportionalitätsfaktor zwischen dem Magnetfeld und seiner Änderung in z-Richtung:\\
-$\epsilon$ = 0.9530 $\pm$ 0.0026
-
-\section{Fehlerabschätzung}
-Der Fehler auf den Strom $m_I$ ist anhand der Anzeigegenauigkeit des Messgerätes abgeschätzt und fliesst nur indirekt in die Fehlerrechnung. Der Fehler auf die magnetische Induktion $m_B$ setzt sich zusammen aus dem Fehler auf dem Strom $m_I$ und der Ungenauigkeit des Ablesens aus der Kurve. Der Fehler auf der Temperatur wurde als höher abgeschätzt als die Ungenauigkeit des Messgerätes, da die Temperatur trotz aller Bemühungen zur Konstanthaltung während einer Messung dennoch leicht variieren konnte. Der Fehler auf den Abstand der lokalen Maxima $m_q$ ergibt sich aus dem Algorithmus der Fit-Methode.
-
-Die Fehler auf den Längen $L$, $l$ und $a$ haben wir anhand ihrer Grösse und der Schwierigkeit der Durchführung der Messung abgeschätzt. Der Fehler auf $\epsilon$ ist aus den Praktikumsunterlagen bekannt.
-\clearpage
-
-\chapter{Resultate}
-In Tabelle \ref{tabelle2} sind die in Kapitel \ref{Datenanalyse} errechneten Werte und deren Fehler (aus Kapitel \ref{Fehlerrechnung}) des magnetischen Moments des Elektrons $m_{s,z}$ mit den entsprechenden magnetischen Feldstärken $B$ zusammengefasst. Dabei ist augenfällig, dass der Betrag von $m_{s,z}$ mit der Feldstärke $B$ zunimmt.\\
-
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.2} % Abstandzwischen Zeilen
-\setlength{\tabcolsep}{3mm} % Abstandzwischen Spalten
-\begin{tabular}{|c|c|}
-$B$ [T] & $m_{s,z}$ [10$^{-24}$ J$\cdot$T$^{-1}$] \\ \hline
-0.320 $\pm$ 0.010 & -7.90 $\pm$ 0.68\\
-0.485 $\pm$ 0.010 & -8.27 $\pm$ 0.68\\
-0.560 $\pm$ 0.010 & -8.51 $\pm$ 0.70\\
-0.635 $\pm$ 0.010 & -8.53 $\pm$ 0.70\\
-0.695 $\pm$ 0.010 & -8.65 $\pm$ 0.70\\
-0.750 $\pm$ 0.010 & -8.67 $\pm$ 0.70\\
-\end{tabular}
-\caption[Resultate]{Errechnete Werte für $m_{s,z}$ zu verschiedenen Feldstärken $B$}\label{tabelle2}
-\end{table} Der daraus errechnete Mittelwert ist:$\quad \overline{m}_{s,z}$ = (-8.42 $\pm$ 0.69) $\cdot$ 10$^{-24}$ J$\cdot$T$^{-1}$
-
-Wenn wir dies mit dem Literaturwert\footnote{National Institute of Standards and Technology, http://physics.nist.gov/cgi-bin/cuu/Value?muem, abgerufen am 9.2.17} $m_{s,z}$ = -9.28 $\cdot$ 10$^{-24}$ J$\cdot$T$^{-1}$ vergleichen, so sehen wir, dass dieser knapp nicht in der Fehlergrenze unseres Wertes liegt. Mögliche Fehlerquellen sehen wir in der schwankenden Temperatur des Ofens und den eventuell schlecht kalibrierten Geräten. Auch mag in der Vereinfachung in Formel \ref{BGradient} zur Bestimmung des Feldgradienten eine grobe Fehlerquelle liegen, die nicht in der Fehlerrechnung berücksichtigt wurde. Nichtsdestotrotz zeichneten sich deutlich zwei diskrete lokale Maxima ab, was die Aufspaltung aufgrund der zwei verschiedenen Spineinstellungen immerhin qualitativ nachweisen konnte.
-
+	Mit Hilfe des vorgegebenen Matlab-Tools wird dann mit dem Levenberg-Marquardt-Algorithmus ein Fit durch die Messdaten gelegt, dessen Form einer Überlagerung der in der Versuchsanleitung hergeleiteten theoretischen Verteilung und der des Nullfeldes entspricht. Diese Kurve verfügt über zwei lokale Maxima, deren Position $u_e$ für die Berechnung des magnetischen Moments $m_{s,z}$ verwendet wird.
 
 \clearpage
 
 
-\chapter{Datenanalyse}\label{Datenanalyse}
+\chapter{Theorie} \label{Datenanalyse}
 
-Aus Überlegungen zum geometrischen Aufbau der Versuchsanlage und der Kraft eines räumlich variierenden Magnetfeldes auf ein magnetisches Moment $\vec{ \mu }$ ergibt sich Formel (4.1), welche wir aus der Versuchsanleitung übernommen haben. Dabei sind $u_e$ die wahrscheinlichsten Aufprallpunkte der Atome und $q$ ist der Abstand der beiden Maxima, die sich aus den zwei Spineinstellungen ergeben, $L$ ist die Länge der Pole, $l$ die Distanz zwischen Magnetfeldeintritt und Detektor, $a$ der Radius des konvexen Pols, $k_B$ die Boltzmann-Konstante und $T$ die Temperatur.
+Aus Überlegungen zum geometrischen Aufbau der Versuchsanlage und der Kraft eines räumlich variierenden Magnetfeldes auf ein magnetisches Moment $\vec{ \mu }$ ergibt sich Formel (4.1), welche wir aus der Versuchsanleitung übernommen haben. Dabei ist $u_e$ die Position der beiden wahrscheinlichsten Aufprallpunkte der Atome, die sich aus den zwei Spineinstellungen ergeben, $q$ eine mathematische Substitution ($q=3u_e$), die vom Fit-Algorithmus direkt ausgegeben wird, $L$ ist die Länge der Pole, $l$ die Distanz zwischen Magnetfeldeintritt und Detektor, $a$ der Radius des konvexen Pols, $k_B$ die Boltzmann-Konstante und $T$ die Temperatur.
 
 
 \begin{equation}
@@ -255,30 +192,110 @@ Die Veränderung des Magnetfeld in $z$-Richtung ergibt sich aus der Geometrie de
 \epsilon = \left|\frac{\partial B}{\partial z}\right| \frac{a}{B}
 \end{equation}
 
-Damit leiteten wir folgende Formel zur Berechnung des magnetischen Moments des Elektrons $m_{s,z}$ her:
+Die Magnetische Feldstärke haben wir anhand der Magnetfeld-Eichkurve (Abbildung \ref{Abb:Eichkurve} im Appendix). Die Formel \begin{equation}
+B(I) = a_0 + a_1 I + a_2 I^2 + a_3 I^3
+\end{equation} \begin{align*}
+&a_0 = 0.025459 \pm 0.002781 \quad
+a_1 = 0.6113 \pm 0.0209 \\ 
+&a_2 = 0.5146 \pm 0.0415 \quad
+a_3 = -0.3907 \pm 0.0227
+\end{align*} wurde aus der entsprechenden Abbildung aus der Praktikumsanleitung herausgelesen.
+
+Aus Formel \ref{BGradient} leiteten wir folgende Formel zur Berechnung des magnetischen Moments des Elektrons $m_{s,z}$ her:
 \begin{equation} \label{Moment}
-m_{s,z}=\frac{2k_BTqa}{lL(1-\frac{L}{2l})\epsilon B}
+m_{s,z}=\frac{2k_BTqa}{lL(1-\frac{L}{2l})\epsilon B} = \frac{2k_BTa}{lL(1-\frac{L}{2l})\epsilon} \cdot \left(\frac{B}{q}\right)^{-1}
 \end{equation}
 
-Anhand von Formel \ref{Moment} wurden somit zu den jeweiligen Werten von $B$, $q$ und $T$ die das magnetische Moment des Elektrons $m_{s,z}$ berechnet und in Tabelle \ref{tabelle2} zusammengefasst.
+Für die Temperatur $T$ in der Formel \ref{Moment} wurde der Mittelwert $\bar{T}$ verwendet. Um einen sinnvollen Wert für $\frac{B}{q}$ zu erzielen, wurden die jeweiligen Werte in einem Plot (Abbildung \ref{Abb:B/q}) aufgetragen und die Steigung des linearen Fits ($\chi^2$-Methode) als Wert von $\frac{B}{q}$ eingesetzt. Diese Methode ist daher notwendig, dass die Magnetfeld-Eichkurve nur im gemessenen Bereich näherungsweise linear ist und der lineare Fit nicht durch den Nullpunkt gehen würde.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.1]{Plot}
+\caption[Plot]{Linearer Fit durch $B(q)$-Kurve}
+\label{Abb:B/q}
+\end{figure}
+
 
 \clearpage
 
+\chapter{Messdaten}
+
+\section{Datentabelle}
+In Tabelle \ref{tabelle1} sind die wichtigsten Resultate der Messungen zusammengefasst, und zwar der Strom $I$ durch die Magnetspulen, die Magnetfeldstärke $B$, die der jeweiligen Stromstärke $I$ entspricht (bestimmt anhand der Magnetfeld-Eichkurve in der Versuchsanleitung), die abgelesene Temperatur $T$ des Ofens und der Grösse $q$. Wir beschränken uns an dieser Stelle auf diese zusammengefasste Darstellung der Daten, da die Originalmessdaten pro Messung mehrere tausend Messpunkte umfassen. \\
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2} % Abstandzwischen Zeilen
+\setlength{\tabcolsep}{3mm} % Abstandzwischen Spalten
+\begin{tabular}{|c|c|c|c|} 
+$I$ [mA] & 			$B$ [T] & 					$T$ [K]  & 		$q$ [mm]\\ \hline
+402   $\pm$ 5      & 0.306   $\pm$ 0.012   & 457.3  $\pm$ 0.1   & 2.2452 $\pm$ 0.0015 \\
+600    $\pm$ 5      & 0.470   $\pm$ 0.021   & 459.5  $\pm$ 0.1   &3.5437  $\pm$ 0.0025\\
+700    $\pm$ 5      & 0.549   $\pm$ 0.027  & 459.7   $\pm$ 0.1   &4.2096  $\pm$ 0.0029\\
+800    $\pm$ 5     & 0.621    $\pm$ 0.034 & 459.7    $\pm$ 0.1   & 4.7810 $\pm$  0.0032 \\
+900    $\pm$ 5     & 0.685    $\pm$ 0.042 & 459.9    $\pm$ 0.1    &5.3034  $\pm$  0.0032 \\
+1000    $\pm$ 5    & 0.738     $\pm$ 0.052 & 460.7       $\pm$ 0.1 &5.7311  $\pm$ 0.0041
+\end{tabular}
+\caption[Daten]{Zusammenfassung der Daten}\label{tabelle1}
+\end{table} Der Mittelwert der Temperatur $\bar{T}$ ergibt sich bereits bei einfacher Mittlung der Temperaturwerte in Tabelle \ref{tabelle1}: $\bar{T} = (459.4 \pm 1.0)$
+
+Für die Berechnung des magnetischen Moments des Elektrons haben wir ausserdem die folgenden im Datenblatt der Versuchsanleitung gegebenen Konstanten verwendet:
+
+Länge der Pole:
+$L$ = (70.0 $\pm$ 0.5) mm
+
+Radius des konvexen Pols:
+$a$ = (2.5 $\pm$ 0.2) mm
+
+Distanz Magnetfeldeintritt-Detektor:
+$l$ = (0.455 $\pm$ 0.001) m
+
+Proportionalitätsfaktor zwischen dem Magnetfeld und seiner Änderung in z-Richtung:\\
+$\epsilon$ = 0.9530 $\pm$ 0.0026
+
+
+\section{Fehlerabschätzung}
+Der Fehler auf den Strom $m_I$ ist anhand der Anzeigegenauigkeit des Messgerätes abgeschätzt und fliesst nur indirekt in die Fehlerrechnung. Der Fehler auf der Temperatur wurde als höher abgeschätzt als die Ungenauigkeit des Messgerätes, da die Temperatur trotz aller Bemühungen zur Konstanthaltung während einer Messung dennoch leicht variieren konnte. Der Fehler $m_q$ ergibt sich aus dem Algorithmus der Fit-Methode.
+
+Die Fehler auf den Längen $L$, $l$ und $a$ haben wir anhand ihrer Grösse und der Schwierigkeit der Durchführung der Messung abgeschätzt. Der Fehler auf $\epsilon$ ist aus den Praktikumsunterlagen bekannt.
+\clearpage
+
+\chapter{Resultate}
+
+\section{Ergebnisse}
+
+Aus dem linearen $\chi^2$-Fit ergibt sich eine Steigung von:
+
+$\frac{B}{q} = (124.15 \pm 8.18) $T$ \cdot $m$^{-1}$.
+
+Daraus errechnet sich mit Formel \ref{Moment} das magnetische Moment des Elektrons:
+\begin{center}
+\begin{large}
+$m_{s,z}$ = -(9.12 $\pm$ 0.92) $\cdot$ 10$^{-24}$ J$\cdot$T$^{-1}$
+\end{large}
+\end{center}
+
+
+
+\section{Diskussion}
+
+Wenn wir dies mit dem Literaturwert\footnote{National Institute of Standards and Technology, http://physics.nist.gov/cgi-bin/cuu/Value?muem, abgerufen am 9.2.17} $m_{s,z}$ = -9.28 $\cdot$ 10$^{-24}$ J$\cdot$T$^{-1}$ vergleichen, so sehen wir, dass dieser relativ nahe am errechneten Wert liegt und sich deutlich innerhalb der Fehlerschranken befindet. Dies und die Grösse des Fehlers relativ zur Grössenordnung des errechneten Werts lassen vermuten, dass der Fehler entscheidend zu hoch geschätzt worden ist. Der zu grosse Fehler kommt einerseits wohl dadurch zustande, dass der Fehler auf $B$ zu hoch geschätzt wurde. In Abbildung \ref{Abb:B/q} sieht man nämlich bereits deutlich, dass die Fehlerbalken zu gross sind, verglichen mit der Genauigkeit des linearen Fits.  Andererseits hat auch der Fehler auf den Radius des konvexen Pols $a$ einen entscheidenden Einfluss auf die Grösse des Fehlers und scheint ebenfalls zu hoch geschätzt worden zu sein. 
+
+
+\clearpage
+
+
 \chapter{Fehlerrechnung} \label{Fehlerrechnung}
-Die Fehlerfortpflanzung wurde nach dem Gauss'schen Fehlerfortpflanzungsgesetz (Formel \ref{Gauss}) durchgeführt. Dabei haben wir nur die Fehler auf $q$, $a$, $\epsilon$ und $B$ in unsere Berechnung einbezogen. Die Fehler auf der Temperatur $T$ und den Aufbaukonstanten $L$ und $l$ haben wir vernachlässigt, weil eine Verdoppelung des jeweiligen Fehlers nur eine Veränderung in der dritten Nachkommastelle des Gesamtfehlers zur Folge hatte.
+Die Fehlerfortpflanzung wurde nach dem Gauss'schen Fehlerfortpflanzungsgesetz (Formel \ref{Gauss}) durchgeführt. Dabei haben wir nur die Fehler auf $q$, $a$, $\epsilon$ und $B$ in unsere Berechnung einbezogen. Die Fehler auf der Temperatur $T$ (ergibt sich durch die Standardabweichung $\sigma_T$) und den Aufbaukonstanten $L$ und $l$ haben wir vernachlässigt, weil eine Verdoppelung des jeweiligen Fehlers nur eine Veränderung in der dritten Nachkommastelle des Gesamtfehlers zur Folge hatte.
 
 
 \begin{equation} \label{Gauss}
-m_{m_{s,z}}=\sqrt{(\frac{\partial m}{\partial q} \cdot m_q)^2+(\frac{\partial m}{\partial a} \cdot m_a)^2+(\frac{\partial m}{\partial \epsilon} \cdot m_\epsilon)^2+(\frac{\partial m}{\partial B} \cdot m_B)^2}
+m_{m_{s,z}}=\sqrt{(\frac{\partial m}{\partial a} \cdot m_a)^2+(\frac{\partial m}{\partial \epsilon} \cdot m_\epsilon)^2+(\frac{\partial m}{\partial B/q} \cdot m_{B/q})^2}
 \end{equation}
 
 Die folgenden vier Gleichungen (\ref{ersteableitung} bis \ref{letzteableitung}) sind die Partiellen Ableitungen der Formel \ref{Moment}, welche wir zur Berechnung des Gesamtfehlers auf $m_{s,z}$ benötigt haben.
 
 \begin{equation} \label{ersteableitung}
-\frac{\partial m}{\partial q} = \frac{2k_BTa}{lL(1-\frac{L}{2l})\epsilon B}
-\end{equation}
-
-\begin{equation}
 \frac{\partial m}{\partial a} = \frac{2k_BTq}{lL(1-\frac{L}{2l})\epsilon B}
 \end{equation}
 
@@ -287,11 +304,24 @@ Die folgenden vier Gleichungen (\ref{ersteableitung} bis \ref{letzteableitung}) 
 \end{equation}
 
 \begin{equation} \label{letzteableitung}
-\frac{\partial m}{\partial B} = \frac{-2k_BTaq}{lL(1-\frac{L}{2l})\epsilon B^2}
+\frac{\partial m}{\partial \epsilon} = \frac{-2k_BTa}{lL(1-\frac{L}{2l})\epsilon} \left(\frac{B}{q}\right)^{-2}
 \end{equation}
 
+Der Fehler auf die Steigung $\frac{B}{q}$ ergibt sich aus der $\chi^2$-Fit-Methode.
+
+Analog zur Formel \ref{Gauss} wurde der Fehler auf die magnetische Feldstärke $m_B$, welcher für den linearen Fit verwendet wurde, anhand dem Gauss'schen Fehlerfortpflanzungsgesetz errechnet. Dabei wurden die Fehler auf $I$, $a_0$, $a_1$, $a_2$ und $a_3$ beachtet, deren partiellen Ableitungen trivial sind.
 
 \clearpage
+
+\chapter{Appendix}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Eichkurve}
+\caption[Eichkurve]{Magnetfeld-Eichkurve}
+\label{Abb:Eichkurve}
+\end{figure}
+
  
 
 %\renewcommand{\bibname}{Quellenverzeichnis}
