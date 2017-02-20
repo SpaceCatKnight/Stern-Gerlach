@@ -13,6 +13,10 @@ L = 0.07 # length of the poles
 a = 2.5*10**(-3) # radius of the convex pole
 l = 0.455 # distance magnetic field entry detector??
 ep = 0.953 # constant for magnetic field
+a0 = 1.5459*10**(-2)
+a1 = 0.6113
+a2= 0.5146
+a3 = -0.3907
 mI = 5 # error on I in mA IRRELEVANT!!!!
 ml = 1*10**(-3) # error on l in mm 
 mB = 0.01 # geschatzt aus Fehler auf I
@@ -30,10 +34,10 @@ T = [457.25, 459.45, 459.65, 459.65, 459.85, 460.65] # temperature in K
 q = [0.0022452, 0.0035437, 0.0042096, 0.004781, 0.0053034, 0.005731099999999999] 
 
 
-def Bfeld(I,a,a1,a2,a3):
+def Bfeld(I,a0,a1,a2,a3):
     B = []
     for i in range(6):
-        B.append((a+I[i]*a1+a2*(I[i]**2)+a3*(I[i]**3)))
+        B.append((a0+I[i]*a1+a2*(I[i]**2)+a3*(I[i]**3)))
     return B
     
 B = Bfeld(I,a,a1,a2,a3)
@@ -98,5 +102,3 @@ print("Mittelwert m:",np.mean(ML))
 print("Mittelwert Fehler:",np.mean(FL))
    
 
-    
-    
