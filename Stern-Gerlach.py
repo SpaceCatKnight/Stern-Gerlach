@@ -31,11 +31,11 @@ mT = 0.1
 
 
 I = [0.402,0.600,0.700,0.800,0.900,1.000] # current in A
-#B = [0.320,0.485,0.560,0.635,0.695,0.750] # aus Plot mithilfe von I abgelesen
-TC = [184.1,186.3,186.5,186.5,186.7,187.5] # temperature in C
-#T = [457.25, 459.45, 459.65, 459.65, 459.85, 460.65] # temperature in K
+T = [184.1,186.3,186.5,186.5,186.7,187.5] # temperature in C
+Tc = [457.25, 459.45, 459.65, 459.65, 459.85, 460.65] # temperature in K
 q = [0.0022452, 0.0035437, 0.0042096, 0.004781, 0.0053034, 0.005731099999999999] 
 T = 459.4
+
 
 def Bfeld(I,a0,a1,a2,a3):
     B = []
@@ -67,16 +67,14 @@ def magnetfeld(ep,a,B):
 
 
 def Msz(l,L,kb,T,q,dB,ep,a,B):
-    M = []
-    for i in range(6):
-        M.append((q[i]*2*kb*(T))/(l*L*(1-L/(2*l))*magnetfeld(ep,a,B)[i]))
+    M = (2*kb*T*a)/(l*L*(1-L/(2*l))*ep*124.152)
     return M
     
 
 
    
 def dq(kb,T,a,l,L,ep,B,i):
-    return 2*kb*T*a/(l*L*(1-L/(2*l))*ep*B[i])
+    return 2*kb*T*a/(l*L*(1-L/(2*l))*ep)
 def da(kb,T,q,l,L,ep,B,i):
     return 2*kb*T*q[i]/(l*L*(1-L/(2*l))*ep*B[i])
 def dT(kb,a,q,l,L,ep,B,i):
@@ -89,34 +87,31 @@ def dep(kb,T,a,q,l,L,ep,B,i):
     return -2*kb*T*a*q[i]/(l*L*(1-L/(2*l))*(ep**2)*B[i])   
 def dB(kb,T,a,q,l,L,ep,B,i):
     return -2*kb*T*a*q[i]/(l*L*(1-L/(2*l))*ep*(B[i]**2))
-
+def dK(kb,T,a,q,l,L,ep,B,i):
+    return -2*kb*T*a/(l*L*(1-L/(2*l))*ep*124.152**2)
+    
 def Fehler(kb,T,a,q,l,L,ep,B,mq,ma,mT,ml,mL,mep,mB):
     m = []
 
     for i in range(6):
-        dq1 = dq(kb,T,a,l,L,ep,B,i)
+        #dq1 = dq(kb,T,a,l,L,ep,B,i)
         da1 = da(kb,T,q,l,L,ep,B,i)
         dT1 = dT(kb,a,q,l,L,ep,B,i)
         dl1 = dl(kb,T,a,q,l,L,ep,B,i)
         dL1 = dL(kb,T,a,q,l,L,ep,B,i)
         dep1 = dep(kb,T,a,q,l,L,ep,B,i)
-        dB1 = dB(kb,T,a,q,l,L,ep,B,i)
-        m.append(((dq1*mq[i])**2+(da1*ma)**2+(dT1*mT)**2+(dL1*mL)**2+(dl1*ml)**2+(dep1*mep)**2+(dB1*mB[i])**2)**(0.5))
+        #dB1 = dB(kb,T,a,q,l,L,ep,B,i)
+        dK1 = dK(kb,T,a,q,l,L,ep,B,i)
+        m.append(((da1*ma)**2+(dT1*mT)**2+(dL1*mL)**2+(dl1*ml)**2+(dep1*mep)**2+(dK1*8.17576)**2)**(0.5))
     return m
     
 ML= Msz(l,L,kb,T,q,dB,ep,a,B)
 FL = Fehler(kb,T,a,q,l,L,ep,B,mq,ma,mT,ml,mL,mep,mB)
 
-print("mB-Feld",mB)
-print("B-Feld",B)
-print(""     ) 
-print("Werte von m:",ML)
-print("")
-print("Fehler auf m:",FL)
-print("")
-print("Mittelwert m:",np.mean(ML))
-print("Mittelwert Fehler:",np.mean(FL))
 
+
+print("Wert von m:",ML)
+print("Mittelwert Fehler:",np.mean(FL))
 """
 x = np.array([0.0022452, 0.0035437, 0.0042096, 0.004781, 0.0053034, 0.005731099999999999])
 y = np.array([0.3060222679144, 0.4701447999999999, 0.5485538999999999, 0.6208455999999999, 0.6846756999999999, 0.7376999999999998])
