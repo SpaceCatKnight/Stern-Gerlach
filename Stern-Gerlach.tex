@@ -127,7 +127,7 @@
 
 Das Stern-Gerlach Experiment ist eine anschauliche Demonstration der Richtungsquantelung des magnetischen Moments aufgrund des Elektronenspins. Dazu wird ein einwertiges Metall (in unserem Fall Kalium) verdampft. Mit einer Blende entsteht ein Atomstrahl mit rechteckigem Querschnitt, der durch ein inhomogenes Magnetfeld senkrecht zu dessen Feldlinien verläuft. 
  
- Da das Kalium über abgeschlossenen inneren Schalen ein einzelnes Aussenelektron in der S-Schale hat und das magnetische Bahnmoment im Grundzustand null ist, ist das magnetische Moment des Atoms alleine auf das magnetische Spinmoment des Aussenelektrons zurückzuführen. Die Richtungsquantelung des magnetischen Moments resultiert während der Durchquerung des inhomogenen Magnetfeldes in einer symmetrischen Aufspaltung des Atomstrahls in zwei gleich grosse Teilstrahlen. Ziel des Versuchs ist es, das magnetische Moment $m_{s,z}$ anhand des Betrags der Aufspaltung, dem Gradienten des magnetischen Feldes senkrecht zur Strahlrichtung und der Geometriedaten zu bestimmen.
+ Da Kalium im Grundzustand über abgeschlossenen inneren Schalen ein einzelnes Aussenelektron in der S-Schale hat und das magnetische Bahnmoment daher null ist, ist das magnetische Moment des Atoms alleine auf das magnetische Spinmoment des Aussenelektrons zurückzuführen. Die Richtungsquantelung des magnetischen Moments resultiert während der Durchquerung des inhomogenen Magnetfeldes in einer symmetrischen Aufspaltung des Atomstrahls in zwei gleich grosse Teilstrahlen. Ziel des Versuchs ist es, das magnetische Moment $m_{s,z}$ anhand des Betrags der Aufspaltung, dem Gradienten des magnetischen Feldes senkrecht zur Strahlrichtung und der Geometriedaten zu bestimmen.
  
  Da zum Zeitpunkt unserer Versuchsdurchführung der Detektor defekt war, konnten wir die Messung leider nicht selbst durchführen. Daher verwendeten wir die Messdaten einer anderen Gruppe. Die Bilder stammen alle aus der Versuchsanleitung.
  
@@ -138,7 +138,7 @@ Das Stern-Gerlach Experiment ist eine anschauliche Demonstration der Richtungsqu
  \textit{1. Stern und Gerlach haben 1921 in ihrem Experiment Silber verwendet. Warum funktioniert der
 Versuch auch mit Kalium?}
 
-Sowohl Silber, als auch Kalium verfügen über ein einzelnes Aussenelektron in der S-Schale über abgeschlossenen inneren Schalen und haben im Grundzustand kein magnetisches Bahnmoment, wodurch das magnetische Moment alleine durch das magnetische Spinmoment des Aussenelektrons zustande kommt.
+Sowohl Silber, als auch Kalium verfügen im Grundzustand über ein einzelnes Aussenelektron in der S-Schale über abgeschlossenen inneren Schalen und haben daher kein magnetisches Bahnmoment, wodurch das magnetische Moment alleine durch das magnetische Spinmoment des Aussenelektrons zustande kommt.
 
 \textit{2. Welche Vor- und Nachteile hat die Verwendung von Kalium gegenüber von Silber?}
 
@@ -172,10 +172,10 @@ Abbildung \ref{Abb:Setup} gibt einen Überblick über die wichtigsten Elemente d
 
 \chapter{Theorie} \label{Datenanalyse}
 
-Aus Überlegungen zum geometrischen Aufbau der Versuchsanlage und der Kraft eines räumlich variierenden Magnetfeldes auf ein magnetisches Moment $\vec{ \mu }$ ergibt sich Formel (2.1), welche wir aus der Versuchsanleitung übernommen haben. Dabei ist $u_e$ die Position der beiden wahrscheinlichsten Aufprallpunkte der Atome, die sich aus den zwei Spineinstellungen ergeben, $q$ eine mathematische Substitution ($q=3u_e$), die vom Fit-Algorithmus direkt ausgegeben wird, $L$ ist die Länge der Pole, $l$ die Distanz zwischen Magnetfeldeintritt und Detektor, $a$ der Radius des konvexen Pols, $k_B$ die Boltzmann-Konstante und $T$ die Temperatur.
+Aus Überlegungen zum geometrischen Aufbau der Versuchsanlage und der Kraft eines räumlich variierenden Magnetfeldes auf ein magnetisches Moment $\vec{ \mu }$ ergibt sich Formel \ref{Anleitungsformel}, welche wir aus der Versuchsanleitung übernommen haben. Dabei ist $u_e$ die Position der beiden wahrscheinlichsten Aufprallpunkte der Atome, die sich aus den zwei Spineinstellungen ergeben, $q$ eine mathematische Substitution ($q=3u_e$), die vom Fit-Algorithmus direkt ausgegeben wird, $L$ ist die Länge der Pole, $l$ die Distanz zwischen Magnetfeldeintritt und Detektor, $a$ der Radius des konvexen Pols, $k_B$ die Boltzmann-Konstante und $T$ die Temperatur.
 
 
-\begin{equation}
+\begin{equation} \label{Anleitungsformel}
 u_e=\pm \frac{q}{3}=\frac{lL(1-\frac{L}{2l})m_{s,z} \frac{\partial B}{\partial z}}{6k_BT}
 \end{equation}
 
@@ -192,21 +192,21 @@ Die Veränderung des Magnetfeld in $z$-Richtung ergibt sich aus der Geometrie de
 \epsilon = \left|\frac{\partial B}{\partial z}\right| \frac{a}{B}
 \end{equation}
 
-Die Magnetische Feldstärke haben wir anhand der Magnetfeld-Eichkurve bestimmt (Abbildung \ref{Abb:Eichkurve} im Appendix). Die Formel \begin{equation}
+Die Magnetische Feldstärke haben wir anhand der Magnetfeld-Eichkurve (Abbildung \ref{Abb:Eichkurve} im Appendix) bestimmt. Die Formel \begin{equation}
 B(I) = a_0 + a_1 I + a_2 I^2 + a_3 I^3
 \end{equation} \begin{align*}
 &a_0 = 0.025459 \pm 0.002781 \quad
 a_1 = 0.6113 \pm 0.0209 \\ 
 &a_2 = 0.5146 \pm 0.0415 \quad
 a_3 = -0.3907 \pm 0.0227
-\end{align*} wurde aus der entsprechenden Abbildung aus der Praktikumsanleitung herausgelesen.
+\end{align*} wurde aus der entsprechenden Abbildung aus der Praktikumsanleitung übernommen.
 
-Aus der Formel \ref{BGradient} leiteten wir folgende Gleichung zur Berechnung des magnetischen Moments des Elektrons $m_{s,z}$ her:
+Aus der Formel \ref{Anleitungsformel} und \ref{BGradient} leiteten wir folgende Gleichung zur Berechnung des magnetischen Moments des Elektrons $m_{s,z}$ her:
 \begin{equation} \label{Moment}
 m_{s,z}=\frac{2k_BTqa}{lL(1-\frac{L}{2l})\epsilon B} = \frac{2k_BTa}{lL(1-\frac{L}{2l})\epsilon} \cdot \left(\frac{B}{q}\right)^{-1}
 \end{equation}
 
-Für die Temperatur $T$ in der Formel \ref{Moment} wurde der Mittelwert $\bar{T}$ verwendet. Um einen sinnvollen Wert für $\frac{B}{q}$ zu erzielen, wurden die jeweiligen Werte in einem Plot (Abbildung \ref{Abb:B/q}) aufgetragen und die Steigung des linearen Fits ($\chi^2$-Methode) als Wert von $\frac{B}{q}$ eingesetzt. Diese Methode ist daher notwendig, da die Magnetfeld-Eichkurve nur im gemessenen Bereich näherungsweise linear ist.
+Für die Temperatur $T$ in der Formel \ref{Moment} wurde der Mittelwert $\bar{T}$ verwendet. Um einen sinnvollen Wert für $\frac{B}{q}$ zu erzielen, wurden die jeweiligen $B$- und $q$-Werte in einem Plot (Abbildung \ref{Abb:B/q}) aufgetragen und die Steigung des linearen Fits ($\chi^2$-Methode) als Wert von $\frac{B}{q}$ eingesetzt. Diese Methode ist daher notwendig, da die Magnetfeld-Eichkurve nur im gemessenen Bereich näherungsweise linear ist.
 
 \begin{figure}[H]
 \centering
@@ -221,7 +221,9 @@ Für die Temperatur $T$ in der Formel \ref{Moment} wurde der Mittelwert $\bar{T}
 \chapter{Messdaten}
 
 \section{Datentabelle}
-In Tabelle \ref{tabelle1} sind die wichtigsten Resultate der Messungen zusammengefasst, und zwar der Strom $I$ durch die Magnetspulen, die Magnetfeldstärke $B$, die der jeweiligen Stromstärke $I$ entspricht (bestimmt anhand der Magnetfeld-Eichkurve in der Versuchsanleitung), die abgelesene Temperatur $T$ des Ofens und der Grösse $q$.\\
+In Tabelle \ref{tabelle1} sind die wichtigsten Resultate der Messungen zusammengefasst, und zwar der Strom $I$ durch die Magnetspulen, die Magnetfeldstärke $B$, die der jeweiligen Stromstärke $I$ entspricht (bestimmt anhand der Magnetfeld-Eichkurve in der Versuchsanleitung), die abgelesene Temperatur $T$ des Ofens und der Grösse $q$. Wir beschränken uns
+an dieser Stelle auf diese zusammengefasste Darstellung der Daten, da die Original-
+messdaten pro Messung mehrere tausend Messpunkte umfassen.\\
 
 \begin{table}[H]
 \centering
@@ -237,10 +239,7 @@ $I$ [mA] & 			$B$ [T] & 					$T$ [K]  & 		$q$ [mm]\\ \hline
 1000    $\pm$ 5    & 0.738     $\pm$ 0.052 & 460.7       $\pm$ 0.1 &5.7311  $\pm$ 0.0041
 \end{tabular}
 \caption[Daten]{Zusammenfassung der Daten}\label{tabelle1}
-\end{table} Der Mittelwert der Temperatur $\bar{T}$ ergibt sich bereits bei einfacher Mittlung der Temperaturwerte in Tabelle \ref{tabelle1}:
-\begin{center}
-$\bar{T} = (459.4 \pm 1.0)$
-\end{center}
+\end{table} Der Mittelwert der Temperatur $\bar{T}$ ergibt sich bereits bei einfacher Mittlung der Temperaturwerte in Tabelle \ref{tabelle1}: $\bar{T} = (459.4 \pm 1.0)$K
 
 Für die Berechnung des magnetischen Moments des Elektrons haben wir ausserdem die folgenden im Datenblatt der Versuchsanleitung gegebenen Konstanten verwendet:
 
@@ -271,7 +270,7 @@ Aus dem linearen $\chi^2$-Fit ergibt sich eine Steigung von:
 
 $\frac{B}{q} = (124.15 \pm 8.18) $T$ \cdot $m$^{-1}$.
 
-Daraus errechnet sich mit Formel \ref{Moment} das magnetische Moment des Elektrons:
+Daraus errechnet sich mit Formel \ref{Moment} und Fehlerrechnung in Formel \ref{Gauss} das magnetische Moment des Elektrons:
 \begin{center}
 \begin{large}
 $m_{s,z}$ = -(9.12 $\pm$ 0.92) $\cdot$ 10$^{-24}$ J$\cdot$T$^{-1}$
