@@ -172,7 +172,7 @@ Abbildung \ref{Abb:Setup} gibt einen Überblick über die wichtigsten Elemente d
 
 \chapter{Theorie} \label{Datenanalyse}
 
-Aus Überlegungen zum geometrischen Aufbau der Versuchsanlage und der Kraft eines räumlich variierenden Magnetfeldes auf ein magnetisches Moment $\vec{ \mu }$ ergibt sich Formel (4.1), welche wir aus der Versuchsanleitung übernommen haben. Dabei ist $u_e$ die Position der beiden wahrscheinlichsten Aufprallpunkte der Atome, die sich aus den zwei Spineinstellungen ergeben, $q$ eine mathematische Substitution ($q=3u_e$), die vom Fit-Algorithmus direkt ausgegeben wird, $L$ ist die Länge der Pole, $l$ die Distanz zwischen Magnetfeldeintritt und Detektor, $a$ der Radius des konvexen Pols, $k_B$ die Boltzmann-Konstante und $T$ die Temperatur.
+Aus Überlegungen zum geometrischen Aufbau der Versuchsanlage und der Kraft eines räumlich variierenden Magnetfeldes auf ein magnetisches Moment $\vec{ \mu }$ ergibt sich Formel (2.1), welche wir aus der Versuchsanleitung übernommen haben. Dabei ist $u_e$ die Position der beiden wahrscheinlichsten Aufprallpunkte der Atome, die sich aus den zwei Spineinstellungen ergeben, $q$ eine mathematische Substitution ($q=3u_e$), die vom Fit-Algorithmus direkt ausgegeben wird, $L$ ist die Länge der Pole, $l$ die Distanz zwischen Magnetfeldeintritt und Detektor, $a$ der Radius des konvexen Pols, $k_B$ die Boltzmann-Konstante und $T$ die Temperatur.
 
 
 \begin{equation}
@@ -192,7 +192,7 @@ Die Veränderung des Magnetfeld in $z$-Richtung ergibt sich aus der Geometrie de
 \epsilon = \left|\frac{\partial B}{\partial z}\right| \frac{a}{B}
 \end{equation}
 
-Die Magnetische Feldstärke haben wir anhand der Magnetfeld-Eichkurve (Abbildung \ref{Abb:Eichkurve} im Appendix). Die Formel \begin{equation}
+Die Magnetische Feldstärke haben wir anhand der Magnetfeld-Eichkurve bestimmt (Abbildung \ref{Abb:Eichkurve} im Appendix). Die Formel \begin{equation}
 B(I) = a_0 + a_1 I + a_2 I^2 + a_3 I^3
 \end{equation} \begin{align*}
 &a_0 = 0.025459 \pm 0.002781 \quad
@@ -201,12 +201,12 @@ a_1 = 0.6113 \pm 0.0209 \\
 a_3 = -0.3907 \pm 0.0227
 \end{align*} wurde aus der entsprechenden Abbildung aus der Praktikumsanleitung herausgelesen.
 
-Aus Formel \ref{BGradient} leiteten wir folgende Formel zur Berechnung des magnetischen Moments des Elektrons $m_{s,z}$ her:
+Aus Formel \ref{BGradient} leiteten wir folgende Gleichung zur Berechnung des magnetischen Moments des Elektrons $m_{s,z}$ her:
 \begin{equation} \label{Moment}
 m_{s,z}=\frac{2k_BTqa}{lL(1-\frac{L}{2l})\epsilon B} = \frac{2k_BTa}{lL(1-\frac{L}{2l})\epsilon} \cdot \left(\frac{B}{q}\right)^{-1}
 \end{equation}
 
-Für die Temperatur $T$ in der Formel \ref{Moment} wurde der Mittelwert $\bar{T}$ verwendet. Um einen sinnvollen Wert für $\frac{B}{q}$ zu erzielen, wurden die jeweiligen Werte in einem Plot (Abbildung \ref{Abb:B/q}) aufgetragen und die Steigung des linearen Fits ($\chi^2$-Methode) als Wert von $\frac{B}{q}$ eingesetzt. Diese Methode ist daher notwendig, dass die Magnetfeld-Eichkurve nur im gemessenen Bereich näherungsweise linear ist und der lineare Fit nicht durch den Nullpunkt gehen würde.
+Für die Temperatur $T$ in der Formel \ref{Moment} wurde der Mittelwert $\bar{T}$ verwendet. Um einen sinnvollen Wert für $\frac{B}{q}$ zu erzielen, wurden die jeweiligen Werte in einem Plot (Abbildung \ref{Abb:B/q}) aufgetragen und die Steigung des linearen Fits ($\chi^2$-Methode) als Wert von $\frac{B}{q}$ eingesetzt. Diese Methode ist daher notwendig, da die Magnetfeld-Eichkurve nur im gemessenen Bereich näherungsweise linear ist und der lineare Fit nicht durch den Nullpunkt gehen würde.
 
 \begin{figure}[H]
 \centering
